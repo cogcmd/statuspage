@@ -1,0 +1,2 @@
+pycog3>=0.1.25
+python-dateutil>=2.4.1
