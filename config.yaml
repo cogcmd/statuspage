@@ -1,20 +1,20 @@
 ---
 cog_bundle_version: 3
 name: statuspage
-version: 0.1.0
-# docker:
-#   image: cogcmd/statuspage
-#   tag: 0.1
+version: 0.1.5
+docker:
+  image: cogcmd/statuspage
+  tag: 0.1.5
 commands:
   component:
-    executable: /Users/kevsmith/repos/work/cog-bundles/dev/bin/cog-command
+    executable: /usr/bin/cog-command
     documentation: |
       Enumerate and view status of defined statuspage.io components
 
       statuspage:component [list*|status]  *=default
     rules: [ 'allow' ]
   incident:
-    executable: /Users/kevsmith/repos/work/cog-bundles/dev/bin/cog-command
+    executable: /usr/bin/cog-command
     documentation: |
       List, create, and update statuspage.io incidents
 
