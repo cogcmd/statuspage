@@ -1,0 +1,5 @@
+---
+# Create a directory named 'statuspage' in Cog's dynamic configuration root
+# directory and copy this into the freshly created directory.
+page_id: <YOUR_PAGE_ID>
+api_token: <YOUR_API_TOKEN>
