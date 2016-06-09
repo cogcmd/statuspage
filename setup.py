@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from distutils.core import setup
 
 setup (
     name = "statuspage",
@@ -6,9 +6,9 @@ setup (
     description = "Cog commands for statuspage.io",
     author = "Kevin Smith",
     author_email = "kevin@operable.io",
-    url = "http://operable.io",
-    packages = find_packages(),
-    install_requires = ["pycog3>=0.1.25"],
+    url = "https://github.com/cog-bundles/statuspage",
+    packages = ["statuspage", "statuspage.commands"],
+    requires = ["pycog3 (>=0.1.25)"],
     keywords = ["cog", "statuspage", "incident", "bot", "devops", "chatops", "automation"],
     classifiers = [
         "Programming Language :: Python :: 3",
