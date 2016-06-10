@@ -1,9 +1,10 @@
-`statuspage`: Manage statuspage.io components & incidents from Cog
-==================================================================
+`statuspage`: Manage statuspage.io incidents from Cog
+=====================================================
 
 # TL;DR
-    !statuspage:incident new -s investigating -i critical -c database -n "Denied logins" Increased errors from our primary database is causing new logins to fail. Our operations team is investigating.
-    !statuspage:incident update -s resolved -n "Denied logins" A failing disk on our primary database host is the primary cause of this outage. We have failed over to our backup host while the drive is replaced. Logins have been restored and we continue to monitor the situation.
+
+    !statuspage:incident new -s investigating -i critical -c database -n "Denied logins" Our database is sick
+    !statuspage:incident update -s resolved -n "Denied logins" It got better
 
 # Overview
 
