@@ -5,6 +5,8 @@ version: 0.1.5
 docker:
   image: cogcmd/statuspage
   tag: 0.1.5
+permissions:
+  - statuspage:update
 commands:
   component:
     executable: /usr/bin/cog-command
@@ -21,7 +23,8 @@ commands:
       statuspage:incident list
       statuspage:incident new [-s|--status] [-i|--impact] [-c|--component] [-n|--name] [message]
       statuspage:incident update [-s|--status] [-i|--impact] [-c|--component] [-n|--name] [message]
-    rules: [ 'allow' ]
+    rules:
+      - 'when command is statuspage:incident must have statuspage:update'
     options:
       all:
         type: bool
