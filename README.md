@@ -1,5 +1,5 @@
-`statuspage`: Manage statuspage.io incidents from Cog
-=====================================================
+Manage statuspage.io incidents from Cog
+=======================================
 
 # TL;DR
 
