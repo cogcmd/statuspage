@@ -11,7 +11,7 @@ permissions:
 commands:
   component:
     executable: /usr/bin/cog-command
-    description: Enumerate and view status of defined statuspage components
+    description: Enumerate and view status of defined components
     documentation: |
       Enumerate and view status of defined statuspage.io components
 
@@ -19,7 +19,7 @@ commands:
     rules: [ 'allow' ]
   incident:
     executable: /usr/bin/cog-command
-    description: List, create, and update statuspage incidents
+    description: List, create, and update incidents
     documentation: |
       List, create, and update statuspage.io incidents
 
