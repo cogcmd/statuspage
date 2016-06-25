@@ -1,6 +1,7 @@
 ---
 cog_bundle_version: 3
 name: statuspage
+description: Interact with the statuspage.io API
 version: 0.1.5
 docker:
   image: cogcmd/statuspage
@@ -10,6 +11,7 @@ permissions:
 commands:
   component:
     executable: /usr/bin/cog-command
+    description: Enumerate and view status of defined statuspage.io components
     documentation: |
       Enumerate and view status of defined statuspage.io components
 
@@ -17,6 +19,7 @@ commands:
     rules: [ 'allow' ]
   incident:
     executable: /usr/bin/cog-command
+    description: List, create, and update statuspage.io incidents
     documentation: |
       List, create, and update statuspage.io incidents
 
