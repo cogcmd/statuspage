@@ -18,8 +18,17 @@ since its operation is read-only. Execution of the
 
 # Installing
 
-    curl -O https://github.com/cog-bundles/statuspage/blob/master/config.yaml
-    cogctl bundle install config.yaml
+In chat:
+
+```
+@cog bundle install statuspage
+```
+
+From the command line:
+
+```
+cogctl bundle install statuspage
+```
 
 # Configuring
 
