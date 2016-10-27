@@ -24,18 +24,13 @@ since its operation is read-only. Execution of the
 # Configuring
 
 The `statuspage` bundle requires your statuspage.io page id and API
-token. Relay's dynamic configuration feature is the easiest way to
-make this happen. Simply create a directory named `statuspage` inside
-Relay's dynamic configuration root directory. Then drop a file named
-`config.yaml` in the newly created directory with the following
-contents:
+token. You can set these variables with Cog's dynamic config feature:
 
-```yaml
----
-page_id: <YOUR_PAGE_ID>
-api_token: <YOUR_API_TOKEN>
+```bash
+echo 'page_id: <YOUR_PAGE_ID>' >> config.yaml
+echo 'api_token: <YOUR_PAGE_ID>' >> config.yaml
+cogctl dynamic-config create statuspage config.yaml
 ```
-
 
 # Building
 
