@@ -1,8 +1,8 @@
 ---
-cog_bundle_version: 3
+cog_bundle_version: 4
 name: statuspage
 description: Interact with the statuspage.io API
-version: 0.1.5
+version: 0.1.6
 docker:
   image: cogcmd/statuspage
   tag: 0.1.5
@@ -52,24 +52,39 @@ commands:
     rules: [ 'allow' ]
 templates:
   comps_list:
-    slack: |
-      {{name}}
+    body: |
+      ~each var=$results as=result~
+      ~$result.name~
+      ~end~
   comps_status:
-    slack: |
-      Component: {{name}}  Status: {{status}}  Last Updated: {{last_updated}}
+    body: |
+      ~each var=$results as=result~
+      Component: ~$result.name~  Status: ~$result.status~  Last Updated: ~$result.last_updated~
+      ~end~
   incidents_list:
-    slack: |
-      Incident {{name}} ({{impact}}) has been active since {{active_since}}. Current status is '{{status}}'.
-      {{link}}
+    body: |
+      ~each var=$results as=result~
+      Incident ~$result.name~ (~$result.impact~) has been active since ~$result.active_since~. Current status is '~$result.status~'.
+      ~$result.link~
+      ~end~
   no_incidents:
-    slack: "{{incidents}} unresolved incidents found."
+    body: |
+      ~each var=$results as=result~
+      "~$result.incidents~ unresolved incidents found."
+      ~end~
   incident_created:
-    slack: |
-      Incident {{name}} was created. Click {{link}} to view.
+    body: |
+      ~each var=$results as=result~
+      Incident ~$result.name~ was created. Click ~$result.link~ to view.
+      ~end~
   incident_updated:
-    slack: |
-      Incident {{name}} was updated. Click {{link}} to view.
+    body: |
+      ~each var=$results as=result~
+      Incident ~$result.name~ was updated. Click ~$result.link~ to view.
+      ~end~
   incident_resolved:
-    slack: |
-      Incident {{name}} was resolved at {{resolved_at}}. Click {{link}} to view.
+    body: |
+      ~each var=$results as=result~
+      Incident ~$result.name~ was resolved at ~$result.resolved_at~. Click ~$result.link~ to view.
+      ~end~
 
